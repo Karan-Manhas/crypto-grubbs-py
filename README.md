@@ -3,9 +3,7 @@ This Python script analyzes cryptographic benchmarking data (specifically from K
 
 This project takes the benchmarked cryptographic operations (like key generation, encryption, and decryption) data by fetching data from a MySQL database, and applying  **Grubbs' Test** to iteratively detect and remove outliers based on execution time.
 
-The goal of this project is to clean and stabilize cryptographic benchmark results by applying statistical methods to identify noisy or extreme values that skew performance analysis. Additionally to 
-
----
+The goal of this was to clean, identify optimal iteration count, and stabilize cryptographic benchmark results by applying statistical methods to identify noisy or extreme values that skew performance analysis.
 
 
 ## Why These Stats?
@@ -38,7 +36,7 @@ Used to evaluate the **reliability and precision** of cryptographic performance 
 ##  Project Structure
 
 - .venv/Scripts/activate is how to activate the virtual environment
-- .venv/Scripts/script.py is to be execute din the environment via `python script.py` once virtual environment is running
+- .venv/Scripts/script.py is to be executed in the environment via `python script.py` once virtual environment is running
 
 ## Prequisites
 
@@ -87,6 +85,3 @@ python .venv/Scripts/script.py
 - Plots showing standard deviation trend as outliers are removed (Example found here: `crypto-grubbs-py\example output.png`)
 - Console logs showing intial and final dataset size
 - Cleaned data saved to CSV file named like: `filtered_kyber_benchmark_1000_YYYY-MM-DD_HH-MM-SS.csv`
-
-
-crypto-grubbs-py\example output.png
